@@ -13,7 +13,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '.rules') {
-    	message.channel.send({embed: {
+    	message.reply({embed: {
   color: 3447003,
   description: "A very simple Embed!"
 }});
