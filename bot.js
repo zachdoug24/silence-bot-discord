@@ -13,7 +13,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '.rules') {
-        message.channel.send("Thank you for being interested in our rules! Please read #rules-and-information for the list!");
+        message.channel.send("Thank you for being interested in our rules! Please read <#434919397086330883> for the list!");
     }
 });
 
