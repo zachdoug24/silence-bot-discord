@@ -33,7 +33,7 @@ client.on('guildMemberAdd', member => {
   "description": "Please be sure you check out the <#434919397086330883> channel for everything you need to know about your stay here.",
   "color": 5221730,
   "footer": {
-    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "icon_url": "https://cdn.discordapp.com/avatars/161331492730044416/58457f95610d97c47c380842b2c00fc4.png",
     "text": "Created with Silence"
   },
   "author": {
