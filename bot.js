@@ -32,7 +32,7 @@ client.on('guildMemberAdd', member => {
   "color": 4960873,
   "footer": {
     "icon_url": member.user.displayAvatarURL,
-    "text": "client.user.username has joined the server!"
+    "text": "${member.user.username} has joined the server!"
   }
 };
 channel.send({ embed });
