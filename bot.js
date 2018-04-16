@@ -27,12 +27,18 @@ client.on('guildMemberAdd', member => {
   if (!channel) return;
   console.log(123);
   // Send the message, mentioning the member
+  
   const embed = {
-  "description": "**Welcome to the server!**",
-  "color": 4960873,
+  "title": "Welcome to the Asylum",
+  "description": "Please be sure you check out the <#434919397086330883> channel for everything you need to know about your stay here.",
+  "color": 5221730,
   "footer": {
-    "icon_url": member.user.displayAvatarURL,
-    "text": "${member.user.username} has joined the server!"
+    "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "text": "Created with Silence"
+  },
+  "author": {
+    "name": member + " has joined.",
+    "icon_url": member.user.displayAvatarURL
   }
 };
 channel.send({ embed });
