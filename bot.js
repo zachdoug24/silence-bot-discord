@@ -25,7 +25,7 @@ client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find('name', 'newcomers');
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
-  console.log(123);
+  console.log('We are ready to alert new members of their insanity!');
   // Send the message, mentioning the member
   
   const embed = {
