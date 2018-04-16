@@ -1,14 +1,36 @@
+*
+  A bot that welcomes new guild members when they join
+*/
+
+// Import the discord.js module
 const Discord = require('discord.js');
+
+// Create an instance of a Discord client
 const client = new Discord.Client();
 
+// The ready event is vital, it means that your bot will only start reacting to information
+// from Discord _after_ ready is emitted
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+  console.log('I am ready!');
 });
 
-client.on('message', msg => {
-  if (msg.content === 'ping') {
-    msg.reply('pong');
+// Create an event listener for new guild members
+client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find('name', 'newcomers');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  const embed = {
+  "description": "**Welcome to the server!**",
+  "color": 4960873,
+  "footer": {
+    "icon_url": "client.user.avatarURL",
+    "text": "${Member} has joined the server!"
   }
+};
+channel.send({ embed });
 });
+
 
 client.login(process.env.BOT_TOKEN);
