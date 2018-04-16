@@ -1,6 +1,7 @@
 
 // Load up the discord.js library
 const Discord = require("discord.js");
+const client = new Discord.Client();
 
 client.on("ready", () => {
   // This event will run if the bot starts, and logs in, successfully.
