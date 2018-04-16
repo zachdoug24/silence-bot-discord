@@ -14,6 +14,15 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 
+// Create an event listener for messages
+client.on('message', message => {
+  // If the message is "ping"
+  if (message.content === 'ping') {
+    // Send "pong" to the same channel
+    message.channel.send('pong');
+  }
+});
+
 // Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
