@@ -31,7 +31,7 @@ client.on('guildMemberAdd', member => {
   "description": "**Welcome to the server!**",
   "color": 4960873,
   "footer": {
-    "icon_url": "client.user.avatarURL",
+    "icon_url": member.user.displayAvatarURL,
     "text": "${Member} has joined the server!"
   }
 };
