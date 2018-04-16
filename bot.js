@@ -37,7 +37,7 @@ client.on('guildMemberAdd', member => {
     "text": "Created with Silence"
   },
   "author": {
-    "name": member + " has joined.",
+    "name": member.displayName + " has joined.",
     "icon_url": member.user.displayAvatarURL
   }
 };
