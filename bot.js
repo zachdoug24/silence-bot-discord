@@ -19,6 +19,7 @@ client.on('message', message => {
   }
 });
 
+
 // Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
@@ -30,7 +31,7 @@ client.on('guildMemberAdd', member => {
   
   const embed = {
   "description": "Please be sure you check out the <#434919397086330883> channel for everything you need to know about your stay here.",
-  "color": 5221730,
+  "color": 5296491,
   "footer": {
     "icon_url": "https://cdn.discordapp.com/avatars/161331492730044416/58457f95610d97c47c380842b2c00fc4.png",
     "text": "Created with Silence"
@@ -43,6 +44,7 @@ client.on('guildMemberAdd', member => {
 channel.send({ embed });
 });
 
+
 // Create an event listener for guild members leaving.
 client.on('guildMemberRemove', member => {
   // Send the message to a designated channel on a server:
@@ -52,8 +54,9 @@ client.on('guildMemberRemove', member => {
   // Send the message, mentioning the member
   
   const embed = {
-   "color": 8403000,
-  "footer": {
+   "description": "We're sad to see you going..."
+   "color": 14700624,
+   "footer": {
     "icon_url": "https://cdn.discordapp.com/avatars/161331492730044416/58457f95610d97c47c380842b2c00fc4.png",
     "text": "Created with Silence"
   },
