@@ -43,5 +43,27 @@ client.on('guildMemberAdd', member => {
 channel.send({ embed });
 });
 
+// Create an event listener for guild members leaving.
+client.on('guildMemberRemove', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find('name', 'newcomers');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  
+  const embed = {
+   "color": 8403000,
+  "footer": {
+    "icon_url": "https://cdn.discordapp.com/avatars/161331492730044416/58457f95610d97c47c380842b2c00fc4.png",
+    "text": "Created with Silence"
+  },
+  "author": {
+    "name": member.displayName + " has left.",
+    "icon_url": member.user.displayAvatarURL
+  }
+};
+channel.send({ embed });
+});
+
 
 client.login(process.env.BOT_TOKEN);
