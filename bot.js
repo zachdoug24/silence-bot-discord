@@ -14,8 +14,8 @@ client.on('ready', () => {
 client.on('message', message => {
   // If the message is "ping"
   if (message.content === 'ping') {
-    // Send "pong" to the same channel
-    message.channel.send('Your ping is `' + `${Date.now() - message.createdTimestamp}` + ' ms`')');
+    // Send user's ping to the same channel
+    message.channel.sendMessage('Your ping is `' + `${Date.now() - message.createdTimestamp}` + ' ms`');
   }
 });
 
