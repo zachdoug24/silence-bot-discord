@@ -22,7 +22,7 @@ client.on('message', message => {
 // Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find('name', 'newcomers');
+  const channel = member.guild.channels.find('name', 'join-leave');
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   console.log('We are ready to alert new members of their insanity!');
@@ -46,7 +46,7 @@ channel.send({ embed });
 // Create an event listener for guild members leaving.
 client.on('guildMemberRemove', member => {
   // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find('name', 'newcomers');
+  const channel = member.guild.channels.find('name', 'join-leave');
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
