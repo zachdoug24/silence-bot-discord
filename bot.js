@@ -54,7 +54,7 @@ client.on('guildMemberRemove', member => {
   // Send the message, mentioning the member
   
   const embed = {
-   "description": "We're sad to see you going..."
+   "description": "We're sad to see you going...",
    "color": 14700624,
    "footer": {
     "icon_url": "https://cdn.discordapp.com/avatars/161331492730044416/58457f95610d97c47c380842b2c00fc4.png",
