@@ -15,7 +15,7 @@ client.on('message', message => {
   // If the message is "ping"
   if (message.content === 'ping') {
     // Send "pong" to the same channel
-    message.channel.send('pong');
+    message.channel.send('Your ping is `' + `${Date.now() - message.createdTimestamp}` + ' ms`')');
   }
 });
 
@@ -29,7 +29,6 @@ client.on('guildMemberAdd', member => {
   // Send the message, mentioning the member
   
   const embed = {
-  "title": "Welcome to the Asylum",
   "description": "Please be sure you check out the <#434919397086330883> channel for everything you need to know about your stay here.",
   "color": 5221730,
   "footer": {
