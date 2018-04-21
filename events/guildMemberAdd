@@ -13,5 +13,6 @@ exports.run = (client, member => {
     "icon_url": member.user.displayAvatarURL
   }
 };
-channel.send({ embed });
+
+channel.send({ embed })
 }
