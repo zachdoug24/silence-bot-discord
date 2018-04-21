@@ -1,4 +1,4 @@
-exports.run = (client, member => {
+exports.run = (client, member) => {
     const channel = member.guild.channels.find('name', 'join-leave');
     if (!channel) return;
     const embed = {
@@ -14,5 +14,5 @@ exports.run = (client, member => {
     }
   };
   
-  channel.send({ embed })
-  }  
+  channel.send({ embed });
+  };
