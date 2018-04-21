@@ -12,9 +12,18 @@ exports.run = (client, message, [mention, ...reason]) => {
   if (!message.guild.me.hasPermission("KICK_MEMBERS"))
     return message.reply("");
 
-  const kickMember = message.mentions.members.first();
-
+  const embed = {
+   "color": 14700624,
+   "footer": {
+    "icon_url": "https://cdn.discordapp.com/avatars/161331492730044416/58457f95610d97c47c380842b2c00fc4.png",
+    "text": "Created with Silence"
+  },
+  "author": {
+    "name": member.displayName + " has been kicked.",
+    "icon_url": member.user.displayAvatarURL
+  }
+};
   kickMember.kick(reason.join(" ")).then(member => {
-    message.reply(`${member.user.username} was succesfully kicked.`);
+channel.send({ embed });
   });
 };
