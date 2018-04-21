@@ -24,6 +24,6 @@ exports.run = (client, message, [mention, ...reason]) => {
   }
 };
   kickMember.kick(reason.join(" ")).then(member => {
-channel.send({ embed });
+    message.reply({ embed });
   });
 };
