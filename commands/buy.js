@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
    "description": message.author + " is wishing to buy " + args.join(" "),
    "color": 0x00ff80,
    "author": {
-    "name": message.author.name + " is buying something.",
+    "name": message.author.username + " is buying something.",
     "icon_url": message.author.displayAvatarURL
    }
   };
