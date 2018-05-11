@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
+const OwnerID = "161331492730044416";
 
 const config = require("./config.json");
 
