@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
         return;
       }
       
-      cont fetched = await message.channel.fetchMessages({limit:args[0]});
+      const fetched = await message.channel.fetchMessages({limit:args[0]});
       console.log(fetched.size + " messages found, deleting...");
       
       message.channel.bulkDelete(fetched)
