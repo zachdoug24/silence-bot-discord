@@ -5,8 +5,8 @@ exports.run = (client, message, args) => {
    "color": 0x00ff80
    },
    "author": {
-    "name": member.displayName + " is buying something.",
-    "icon_url": member.user.displayAvatarURL
+    "name": message.author.displayName + " is buying something.",
+    "icon_url": message.author.displayAvatarURL
   };
    message.channel.send({embed})
 }
