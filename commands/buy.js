@@ -6,6 +6,6 @@ exports.run = (client, message, args) => {
    "author": {
     "name": message.author.displayName + " is buying something.",
     "icon_url": message.author.displayAvatarURL
-  };
+  }
    message.channel.send({embed})
 }
