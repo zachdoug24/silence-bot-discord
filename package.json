@@ -1,11 +1,11 @@
 {
   "name": "Silence Bot",
   "description": "Personal Discord Bot for Silence",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "bot.js",
   "engines": {
     "npm": "5.7.x",
-    "node": "8.9.x"
+    "node": "8.11.x"
   },
   "scripts": {
     "start": "node bot.js"
