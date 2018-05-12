@@ -3,6 +3,9 @@
   "description": "Personal Discord Bot for Silence",
   "version": "0.0.0",
   "main": "bot.js",
+  "engines": {
+    "npm": "5.6.x"
+  },
   "scripts": {
     "start": "node bot.js"
   },
