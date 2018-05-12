@@ -1,12 +1,29 @@
 exports.run = (client, message, args) => {
+   let description = args[0];
+   let price = args[1];
    message.delete();
    const embed = {
-   "description": message.author + " is wishing to buy " + args.join(" "),
-   "color": 0x00ff80,
-   "author": {
-    "name": message.author.username + " is buying something.",
+  "color": 10081886,
+  "author": {
+    "name": message.author.username,
     "icon_url": message.author.displayAvatarURL
-   }
-  };
-   message.channel.send({embed})
+  },
+  "fields": [
+    {
+      "name": "Wanting to Purchase",
+      "value": description
+    },
+    {
+      "name": "Purchase Price",
+      "value": price,
+      "inline": true
+    },
+    {
+      "name": "Contact User",
+      "value": message.author,
+      "inline": true
+    }
+  ]
+};
+message.channel.send({embed})
 }
