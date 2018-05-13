@@ -20,7 +20,7 @@ exports.run = (client, message, args) => {
     },
     {
       "name": "Contact User",
-      "value": message.author,
+      "value": message.author.toString(),
       "inline": true
     }
   ]
