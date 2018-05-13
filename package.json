@@ -1,17 +1,27 @@
 {
-  "name": "Silence Bot",
-  "description": "Personal Discord Bot for Silence",
-  "version": "0.0.1",
+  "name": "silence-bot",
+  "version": "1.0.0",
+  "description": "Personal Discord Bot.",
   "main": "bot.js",
-  "engines": {
-    "npm": "5.7.x",
-    "node": "8.11.x"
-  },
+  "keywords": [
+    "node",
+    "discord",
+    "personal",
+    "stfu"
+  ],
   "scripts": {
     "start": "node bot.js"
   },
+  "bugs": {
+    "url": "https://github.com/zachdoug24/silence-bot-discord/issues"
+  },
+  "engines": {
+    "npm": "5.7.x",
+    "node": " 8.11.x"
+  },
+  "homepage": "https://github.com/zachdoug24/silence-bot-discord#readme",
   "dependencies": {
-    "discord.js": "11.3.1",
+    "discord.js": "^11.3.2",
     "request": "2.81.0"
   }
 }
