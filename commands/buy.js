@@ -1,16 +1,17 @@
 exports.run = (client, message, args) => {
   let price = args[0]
-  let description = args.slice(1).join(" ")
+  let cur = args[1]
+  let description = args.slice(2).join(" ")
   message.delete();
   const embed = {
     "color": 2667619,
     "author": {
-      "name": client.user.username,
+      "name": client.user.username + " knows someone that wants to buy something.",
       "icon_url": client.user.avatarURL
     },
     "timestamp": new Date(),
     "footer": {
-      "name": message.author.username,
+      "text": message.author.username,
       "icon_url": message.author.displayAvatarURL
     },
     "fields": [
@@ -20,7 +21,7 @@ exports.run = (client, message, args) => {
       },
       {
         "name": "Purchase Price",
-        "value": price,
+        "value": price + " " + cur,
         "inline": true
       },
       {

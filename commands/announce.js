@@ -1,5 +1,7 @@
 exports.run = (client, message, args) => {
    message.delete();
+   const channel = member.guild.channels.find('name', 'announcements');
+    if (!channel) return;
    const embed = {
    "description": args.join(" "),
    "timestamp": new Date(),

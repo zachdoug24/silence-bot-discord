@@ -1,12 +1,13 @@
 exports.run = (client, message, args) => {
-    let price = args[0]
-    let cur = args[1]
-    let description = args.slice(2).join(" ")
+    let have = args[0]
+    let cur1 = args[1]
+    let want = args[2]
+    let cur2 = args[3]
     message.delete();
     const embed = {
-      "color": 16734003,
+      "color": 16101441,
       "author": {
-        "name": client.user.username + " knows someone that wants to sell something.",
+        "name": client.user.username + " knows someone that wants to exchange currency.",
         "icon_url": client.user.avatarURL
       },
       "timestamp": new Date(),
@@ -16,18 +17,18 @@ exports.run = (client, message, args) => {
       },
       "fields": [
         {
-          "name": "Wanting to Sell",
-          "value": description
+          "name": "Currency Held",
+          "value": have + " " + cur1,
+          "inline": true
         },
         {
-          "name": "Selling Price",
-          "value": price + " " + cur,
+          "name": "Currency Wanted",
+          "value": want + " " + cur2,
           "inline": true
         },
         {
           "name": "Contact User",
-          "value": message.author.tag,
-          "inline": true
+          "value": message.author.tag
         }
       ]
       
