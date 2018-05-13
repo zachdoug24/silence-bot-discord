@@ -1,6 +1,4 @@
-export function run(client, message, args) {
-  let price = args[0];
-  let description = args[1];
+exports.run = (client, message, [price, ...description]) => {
   message.delete();
   const embed = {
     "color": 10081886,
