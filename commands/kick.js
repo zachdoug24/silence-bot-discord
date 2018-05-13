@@ -13,8 +13,21 @@ exports.run = (client, message, [mention, ...reason]) => {
     return message.reply("");
 
   const kickMember = message.mentions.members.first();
+  const embed = {
+    "color": 13632027,
+    "author": {
+      "name": member.displayName + " has been kicked.",
+      "icon_url": member.user.displayAvatarURL
+    },
+    "fields": [
+      {
+        "name": "Reason",
+        "value": reason
+      }
+    ]
+  };
 
   kickMember.kick(reason.join(" ")).then(member => {
-    message.reply(`${member.user.username} was succesfully kicked.`);
+    message.reply(send({embed}));
   });
 };

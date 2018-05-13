@@ -1,4 +1,6 @@
-exports.run = (client, message, [price, ...description]) => {
+exports.run = (client, message, args) => {
+  let price = args.splice(1)
+  let description = args.splice(2).join(" ")
   message.delete();
   const embed = {
     "color": 10081886,
@@ -23,5 +25,5 @@ exports.run = (client, message, [price, ...description]) => {
       }
     ]
   };
-  message.channel.send({embed});
+  message.channel.send({ embed });
 }
