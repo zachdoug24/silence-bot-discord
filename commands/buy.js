@@ -1,6 +1,6 @@
 exports.run = (client, message, args) => {
-   let description = args[0];
-   let price = args[1];
+   let description = args.slice(0)[0].join(" ")
+   let price = args.slice(1)[1].join(" ");
    message.delete();
    const embed = {
   "color": 10081886,
