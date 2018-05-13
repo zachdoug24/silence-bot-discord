@@ -25,7 +25,7 @@ exports.run = (client, member) => {
     },
     {
       "name": "User Join Date",
-      "value": joineddiscord
+      "value": joineddiscord,
     }
   ]
 };
