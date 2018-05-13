@@ -1,10 +1,15 @@
 exports.run = (client, message, args) => {
-  let price = args.splice(1)
-  let description = args.splice(2).join(" ")
+  let price = args[0]
+  let description = args.slice(1).join(" ")
   message.delete();
   const embed = {
-    "color": 10081886,
+    "color": 2667619,
     "author": {
+      "name": client.user.username,
+      "icon_url": client.user.avatarURL
+    },
+    "timestamp": new Date(),
+    "footer": {
       "name": message.author.username,
       "icon_url": message.author.displayAvatarURL
     },
@@ -20,10 +25,11 @@ exports.run = (client, message, args) => {
       },
       {
         "name": "Contact User",
-        "value": message.author.avatarURL + " " + message.author.tag,
+        "value": message.author.tag,
         "inline": true
       }
     ]
+    
   };
   message.channel.send({ embed });
 }
