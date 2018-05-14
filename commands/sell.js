@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
     let description = args.slice(2).join(" ")
     message.delete();
     const embed = {
-      "color": 16734003,
+      "color": 13632027,
       "author": {
         "name": client.user.username + " knows someone that wants to sell something.",
         "icon_url": client.user.avatarURL
