@@ -1,5 +1,6 @@
-exports.run = (bot, message, args) => {
-    const Discord = require("discord.js")
+const Discord = require("discord.js")
+
+module.exports.run = (bot, message, args) => {
     let bicon = bot.user.displayAvatarURL;
     let botembed = new Discord.RichEmbed()
     .setDescription("Bot Information")
@@ -11,4 +12,8 @@ exports.run = (bot, message, args) => {
     .addField("Created On", bot.user.createdAt);
 
     message.channel.send(botembed);
+}
+
+module.exports.help = {
+    name: "botinfo"
 }
