@@ -1,4 +1,5 @@
-const Discord = require("discord.js")
+const Discord = require("discord.js");
+const colors = require("../colors.json")
 
 module.exports.run = (client, message, args) => {
   let price = args[0]
@@ -9,7 +10,7 @@ module.exports.run = (client, message, args) => {
         .setAuthor(`${client.user.username}`, `${client.user.avatarURL}`)
         .setFooter(`${message.author.username}`, `${message.author.displayAvatarURL}`)
         .setTimestamp()
-        .setColor("#28B463")
+        .setColor(`${colors.green}`)
         .addField("Wanting to Purchase", `${description}`)
         .addField("Purchase Price", `${price} ${cur}`, true)
         .addField("Contact User", `${message.author.tag}`, true)

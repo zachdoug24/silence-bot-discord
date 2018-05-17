@@ -1,10 +1,11 @@
-const Discord = require("discord.js")
+const Discord = require("discord.js");
+const colors = require("../colors.json")
 
 module.exports.run = async (bot, message, args) => {
     let sicon = message.guild.iconURL;
     let serverembed = new Discord.RichEmbed()
-        .setDescription("Server Information")
-        .setColor("#FF97C4")
+        .setAuthor("Server Information")
+        .setColor(`${colors.pink}`)
         .setThumbnail(sicon)
         .addField("Server Name", message.guild.name, true)
         .addField("Server Owner", "Deus Corvi#1225", true)

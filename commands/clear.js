@@ -1,11 +1,12 @@
-const Discord = require("discord.js")
+const Discord = require("discord.js");
+const colors = require("../colors.json")
 
 module.exports.run = (client, message, args) => {
   if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("oof.");
   if(!args[0]) return message.channel.send("oof");
   message.channel.bulkDelete(args[0]).then(() => {
     const embed = {
-      "color": 16734003,
+      "color": colors.red,
       "author": {
         "name": client.user.username,
         "icon_url": client.user.avatarURL

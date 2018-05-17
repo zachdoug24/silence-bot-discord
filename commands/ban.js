@@ -1,4 +1,5 @@
-const Discord = require("discord.js")
+const Discord = require("discord.js");
+const colors = require("../colors.json")
 
 module.exports.run = (bot, message, args) => {
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
@@ -10,7 +11,7 @@ module.exports.run = (bot, message, args) => {
     let banEmbed = new Discord.RichEmbed()
         .setTitle("New Banned Member")
         .setThumbnail(message.author.displayAvatarURL)
-        .setColor("#D0021B")
+        .setColor(`${colors.red}`)
         .addField("Infraction Type", ":scales: Kicked User")
         .addField("Banned User", `${bUser} (UID: ${bUser.id})`)
         .addField("Banned By", `<@${message.author.id}>`)

@@ -1,4 +1,5 @@
-const Discord = require("discord.js")
+const Discord = require("discord.js");
+const colors = require("../colors.json")
 
 module.exports.run = async (bot, message, args) => {
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
@@ -7,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
     let reportEmbed = new Discord.RichEmbed()
         .setDescription("Reports")
-        .setColor("#F5B041")
+        .setColor(`${colors.red}`)
         .addField("Infraction Type", ":warning: Report", false)
         .addField("Reported User", `${rUser} (UID: ${rUser.id})`, true)
         .addField("Reported By", `${message.author}`, true)
